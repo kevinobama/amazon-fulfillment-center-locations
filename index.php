@@ -16,12 +16,8 @@ foreach($locationsHtml->find('tr') as $locationHtml) {
     $location['address']     = $locationHtml->find('td', 3)->plaintext;
 
     $locations[$location['code']] = $location;
-
-    //print_r($location);
+    
 }
 $locationsJson = json_encode($locations);
 saveAsFile($locationsJson);
 
-//saveAsFile('data');
-
-print_r($locationsJson);
